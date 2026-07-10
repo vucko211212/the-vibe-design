@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-plum/95 backdrop-blur transform-gpu">
-        <div className="container-site flex items-center justify-between py-4">
+        <div className="container-site flex items-center justify-between py-2 md:py-4">
         <Link href="/" aria-label="The Vibe Design, home" className="shrink-0" onClick={() => setOpen(false)}>
           <Image
             src="/images/tvd-logo-white.png"
@@ -22,7 +22,7 @@ export default function Header() {
             width={168}
             height={53}
             priority
-            className="w-[120px] md:w-[168px] h-auto pointer-events-none"
+            className="w-[145px] md:w-[168px] h-auto pointer-events-none"
           />
         </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="relative z-[9999] flex h-14 w-14 flex-col items-center justify-center gap-1.5 lg:hidden cursor-pointer touch-manipulation"
+          className="relative z-[9999] flex h-12 w-12 md:h-14 md:w-14 flex-col items-center justify-center gap-1.5 lg:hidden cursor-pointer touch-manipulation"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
