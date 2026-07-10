@@ -20,7 +20,7 @@ export default function WorkPage() {
       <section className="container-site py-24 md:py-32 relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute -bottom-40 left-[-10%] h-[560px] w-[560px] rounded-full opacity-40 blur-3xl"
+          className="pointer-events-none absolute -bottom-40 left-[-10%] h-[560px] w-[560px] rounded-full opacity-40"
           style={{ background: "radial-gradient(circle, #ddd2f5 0%, transparent 70%)" }}
         />
         <TextReveal as="p" immediate className="type-label text-violet">

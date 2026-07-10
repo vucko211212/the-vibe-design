@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>The Danger of the Discount Trap</h2>
-      <p>If you are constantly running "$9/unit Botox" or "50% off laser hair removal" specials, you are training your local market to only visit your MedSpa when you are cheap. You are inadvertently attracting the 'tire-kickers'—patients who will abandon your clinic the exact moment a competitor offers $8/unit.</p>
+      <p>If you are constantly running "$9/unit Botox" or "50% off laser hair removal" specials, you are training your local market to only visit your MedSpa when you are cheap. You are inadvertently attracting the 'tire-kickers', patients who will abandon your clinic the exact moment a competitor offers $8/unit.</p>
       <p>Discounting is a race to the bottom that destroys your profit margins and burns out your clinical staff. More importantly, it cheapens the perception of your medical expertise. You are performing medical procedures, not selling fast fashion.</p>
 
       <h2>Transitioning to Value-Based Selling</h2>
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>The 5-Minute Window of Opportunity</h2>
-      <p>In the aesthetic industry, speed to lead is everything. When a prospective patient finally decides they are ready for a treatment, they want to book it <em>immediately</em>. If your phone rings to voicemail because your staff is busy checking out a patient or answering another line, that lead isn't going to leave a message—they are immediately Googling the next MedSpa on the list.</p>
+      <p>In the aesthetic industry, speed to lead is everything. When a prospective patient finally decides they are ready for a treatment, they want to book it <em>immediately</em>. If your phone rings to voicemail because your staff is busy checking out a patient or answering another line, that lead isn't going to leave a message. They are immediately Googling the next MedSpa on the list.</p>
       
       <h2>Calculating the Financial Drain</h2>
       <p>If your average patient lifetime value (LTV) is $1,500, missing just two calls a day could cost your clinic up to $15,000 in lost potential revenue every single week. You are essentially paying for marketing to make your phone ring, only to throw the ROI out the window by not answering.</p>
@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>The Problem with Home Pages</h2>
-      <p>If a potential patient clicks an ad specifically for "Laser Hair Removal" and lands on your clinic's homepage—where they have to navigate through your team bios, your Botox pricing, and your facial menus just to find what they clicked on—they will leave. In digital marketing, friction is the enemy of conversion. You have roughly 3 seconds to capture their attention and assure them they are in the right place.</p>
+      <p>If a potential patient clicks an ad specifically for "Laser Hair Removal" and lands on your clinic's homepage where they have to navigate through your team bios, your Botox pricing, and your facial menus just to find what they clicked on, they will leave. In digital marketing, friction is the enemy of conversion. You have roughly 3 seconds to capture their attention and assure them they are in the right place.</p>
       
       <h2>The Perfect Landing Page Formula</h2>
       <p>Every single ad campaign must point to an isolated, specific landing page. The anatomy of a winning page includes: <strong>1) A clear headline</strong> that exactly matches the ad they just clicked. <strong>2) Visual social proof</strong> including high-quality before-and-after photos and verified Google reviews. <strong>3) Authority builders</strong> highlighting the doctor's or injector's credentials to build immediate trust. <strong>4) A massive, frictionless call-to-action (CTA)</strong> that links directly to your booking software.</p>
@@ -196,7 +196,7 @@ export const blogPosts: BlogPost[] = [
       <p>A closed-loop marketing system connects the digital dots between a user clicking an ad, booking an appointment on your website, and actually showing up in your CRM. When your systems are connected via APIs or tools like Zapier/n8n, your ad platforms receive real-time feedback on which specific leads actually spent money.</p>
       
       <h2>How Data Feeds the Machine</h2>
-      <p>At The Vibe Design, we don't just run ads—we set up the data infrastructure. By feeding offline conversion data back into the ad platforms, the algorithm learns exactly what a high-paying client looks like. This data-driven research drastically reduces wasted spend and slashes your Customer Acquisition Cost (CAC) by up to 50% over a 6-month period.</p>
+      <p>At The Vibe Design, we don't just run ads, we set up the data infrastructure. By feeding offline conversion data back into the ad platforms, the algorithm learns exactly what a high-paying client looks like. This data-driven research drastically reduces wasted spend and slashes your Customer Acquisition Cost (CAC) by up to 50% over a 6-month period.</p>
 
       <div itemScope itemType="https://schema.org/FAQPage" class="mt-12">
         <h3 class="type-h3">Frequently Asked Questions</h3>
@@ -235,7 +235,7 @@ export const blogPosts: BlogPost[] = [
         <div itemProp="mainEntity" itemScope itemType="https://schema.org/Question" class="mt-4 border-b border-line pb-4">
           <strong itemProp="name" class="block font-semibold">If I have a limited budget, which platform should I start with?</strong>
           <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer" class="mt-2 text-plum-soft">
-            <span itemProp="text">If your budget is under $1,500/month, start with Google Search Ads to capture the lowest-hanging fruit—people already searching for your services in your zip code. Once you see a return, reinvest those profits into Meta Ads for broader brand awareness.</span>
+            <span itemProp="text">If your budget is under $1,500/month, start with Google Search Ads to capture the lowest-hanging fruit: people already searching for your services in your zip code. Once you see a return, reinvest those profits into Meta Ads for broader brand awareness.</span>
           </div>
         </div>
       </div>

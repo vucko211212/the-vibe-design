@@ -12,6 +12,13 @@ export default function ContactForm() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
+    // Honeypot: pravi korisnik ne vidi ovo polje, bot ga popuni.
+    // Ako je popunjeno, tiho "uspemo" bez slanja webhook-u.
+    if (data.company_website) {
+      setStatus("success");
+      return;
+    }
+
     // Webhook URL (iz .env fajla, ili placeholder dok klijent ne postavi n8n)
     const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL || "YOUR_N8N_WEBHOOK_URL_HERE";
 
@@ -51,6 +58,19 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5 min-w-0">
+      {/* Honeypot: skriveno od korisnika, mamac za botove. Ne uklanjati. */}
+      <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
+        <label>
+          Company Website
+          <input
+            type="text"
+            name="company_website"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-2 min-w-0">
           <span className="type-label text-plum-soft">Full Name</span>

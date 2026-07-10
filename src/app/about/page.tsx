@@ -18,7 +18,7 @@ export default function AboutPage() {
       <section className="container-site py-24 md:py-32 relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full opacity-30 blur-3xl"
+          className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full opacity-30"
           style={{ background: "radial-gradient(circle, #f8cfe7 0%, transparent 70%)" }}
         />
         <TextReveal as="p" immediate className="type-label text-violet">

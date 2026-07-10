@@ -30,7 +30,7 @@ export default function AIAgentDemo() {
           <span className="type-label text-violet">Live Demo</span>
           <h3 className="type-h3 mt-3 text-white">Hear the AI in action.</h3>
           <p className="mt-4 text-cream/75 type-body max-w-md">
-            Listen to our AI receptionist flawlessly answer questions, handle objections, and book a lip filler consultation—all without a human lifting a finger.
+            Listen to our AI receptionist flawlessly answer questions, handle objections, and book a lip filler consultation, all without a human lifting a finger.
           </p>
         </div>
 

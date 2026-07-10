@@ -23,12 +23,12 @@ export default function ServicesPage() {
         {/* Iste pozadinske mrlje kao na Home strani */}
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full opacity-50 blur-3xl"
+          className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full opacity-50"
           style={{ background: "radial-gradient(circle, #f8cfe7 0%, transparent 70%)" }}
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute bottom-[-30%] left-[-8%] h-[480px] w-[480px] rounded-full opacity-60 blur-3xl"
+          className="pointer-events-none absolute bottom-[-30%] left-[-8%] h-[480px] w-[480px] rounded-full opacity-60"
           style={{ background: "radial-gradient(circle, #ddd2f5 0%, transparent 70%)" }}
         />
         <div className="container-site relative py-24 md:py-36">
