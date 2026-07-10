@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+/* The Vibe Design tokeni.
+   Pastel osnova izvedena iz brenda, neon gradijent iz logoa samo kao akcenat.
+   Odluka korisnika 10.07.2026 (plan, Korak 1). */
+:root {
+  /* Osnova */
+  --cream: #fbf7f4;
+  --blush: #f8eaf2;
+  --lavender: #efe9f9;
+  --paper: #ffffff;
+
+  /* Tekst */
+  --plum: #2b1f3a;
+  --plum-soft: #6f6280;
+
+  /* Brend akcenat (iz logoa) */
+  --magenta: #e40f9f;
+  --violet: #4a24a5;
+
+  /* Linije i senke */
+  --line: #eadfe8;
+  --shadow-soft: 0 24px 60px -28px rgba(43, 31, 58, 0.25);
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-lavender: var(--lavender);
+  --color-paper: var(--paper);
+  --color-plum: var(--plum);
+  --color-plum-soft: var(--plum-soft);
+  --color-magenta: var(--magenta);
+  --color-violet: var(--violet);
+  --color-line: var(--line);
+  --font-heading: var(--font-ngetic);
+  --font-body: var(--font-josefin);
+}
+
+html {
+  scroll-behavior: initial; /* Lenis preuzima */
+}
+
+body {
+  background: var(--cream);
+  color: var(--plum);
+  font-family: var(--font-josefin), sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--magenta);
+  color: #fff;
+}
+
+.container-site {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 56px);
+}
+
+/* Brend gradijent (logo: magenta u ljubicastu) */
+.grad-brand {
+  background-image: linear-gradient(135deg, #f012a4 0%, #8b1fc2 55%, #41209e 100%);
+}
+
+.grad-text {
+  background-image: linear-gradient(120deg, #e40f9f 10%, #6d2bb5 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Tipografska skala */
+.type-display {
+  font-family: var(--font-ngetic), sans-serif;
+  font-size: clamp(2.6rem, 7vw, 6.25rem);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.type-h2 {
+  font-family: var(--font-ngetic), sans-serif;
+  font-size: clamp(1.9rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.type-h3 {
+  font-family: var(--font-ngetic), sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.type-lead {
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  font-weight: 300;
+  text-wrap: pretty;
+}
+
+.type-body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.type-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Automatsko posvetljivanje ljubicastih labela na tamnim pozadinama */
+.bg-plum .type-label.text-violet {
+  color: var(--lavender) !important;
+}
+
+/* Dugmad */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-josefin), sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1em 1.9em 0.85em; /* Josefin sedi visoko, donji padding manji radi opticke sredine */
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background-image: linear-gradient(135deg, #f012a4 0%, #8b1fc2 55%, #41209e 100%);
+  box-shadow: 0 14px 34px -14px rgba(228, 15, 159, 0.55);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -14px rgba(228, 15, 159, 0.65);
+}
+
+.btn-secondary {
+  color: var(--plum);
+  border: 1.5px solid var(--plum);
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: var(--plum);
+  color: var(--cream);
+}
+
+.link-arrow {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--violet);
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.link-arrow:hover {
+  color: var(--magenta);
+}
+
+/* Kartice */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
