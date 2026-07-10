@@ -13,7 +13,7 @@ export default function NewsletterForm() {
 
   return (
     <form
-      className="flex flex-col gap-4 sm:flex-row sm:items-end"
+      className="flex flex-col gap-4 sm:flex-row sm:items-end min-w-0"
       onSubmit={async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
@@ -35,36 +35,36 @@ export default function NewsletterForm() {
         setDone(true);
       }}
     >
-      <label className="flex flex-1 flex-col gap-2 text-left">
+      <label className="flex flex-1 flex-col gap-2 text-left min-w-0">
         <span className="type-label text-plum-soft">Email</span>
         <input
           type="email"
           name="email"
           required
           autoComplete="email"
-          className="rounded-full border border-line bg-paper px-5 py-3 outline-none transition-colors focus:border-violet"
+          className="rounded-full border border-line bg-paper px-5 py-3 outline-none transition-colors focus:border-violet w-full"
         />
       </label>
-      <label className="flex flex-1 flex-col gap-2 text-left">
+      <label className="flex flex-1 flex-col gap-2 text-left min-w-0">
         <span className="type-label text-plum-soft">First name</span>
         <input
           type="text"
           name="firstName"
           required
           autoComplete="given-name"
-          className="rounded-full border border-line bg-paper px-5 py-3 outline-none transition-colors focus:border-violet"
+          className="rounded-full border border-line bg-paper px-5 py-3 outline-none transition-colors focus:border-violet w-full"
         />
       </label>
-      <label className="flex flex-1 flex-col gap-2 text-left">
+      <label className="flex flex-1 flex-col gap-2 text-left min-w-0">
         <span className="type-label text-plum-soft">Last name</span>
         <input
           type="text"
           name="lastName"
           autoComplete="family-name"
-          className="rounded-full border border-line bg-paper px-5 py-3 outline-none transition-colors focus:border-violet"
+          className="rounded-full border border-line bg-paper px-5 py-3 outline-none transition-colors focus:border-violet w-full"
         />
       </label>
-      <button type="submit" className="btn btn-primary shrink-0">
+      <button type="submit" className="btn btn-primary shrink-0 w-full sm:w-auto justify-center">
         Get the Blueprint
       </button>
     </form>

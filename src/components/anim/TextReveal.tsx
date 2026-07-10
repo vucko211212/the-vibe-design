@@ -37,6 +37,16 @@ export default function TextReveal({
         linesClass: "split-line",
       });
 
+      // Hack za GSAP maske: posto maska ima overflow: hidden, slova kao "g" i "j" 
+      // znaju biti odsecena dole na mobilnim ekranima zbog malog line-height-a.
+      // Dodajemo padding da prosirimo masku na dole, a negativan margin da vratimo razmak linija.
+      split.lines.forEach((line) => {
+        if (line.parentElement) {
+          line.parentElement.style.paddingBottom = "0.25em";
+          line.parentElement.style.marginBottom = "-0.25em";
+        }
+      });
+
       gsap.from(split.lines, {
         yPercent: 110,
         duration: 1.1,
