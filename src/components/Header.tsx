@@ -64,29 +64,32 @@ export default function Header() {
       </header>
 
       {/* Mobile Menu Overlay - OUTSIDE of header to escape backdrop-filter containing block */}
-      {open && (
-        <div data-lenis-prevent="true" className="fixed inset-0 z-[40] bg-plum lg:hidden pt-[100px] pb-10 overflow-y-auto overscroll-contain transform-gpu">
-          <nav className="container-site flex flex-col gap-4 py-8" aria-label="Mobile">
-            {site.nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="py-3 text-2xl font-semibold text-white/90 active:text-magenta"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+      <div 
+        data-lenis-prevent="true" 
+        className={`fixed inset-0 z-[40] bg-plum lg:hidden pt-[100px] pb-10 overflow-y-auto overscroll-contain transform-gpu transition-all duration-1000 ease-in-out ${
+          open ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
+        <nav className="container-site flex flex-col gap-4 py-8" aria-label="Mobile">
+          {site.nav.map((item) => (
             <Link
-              href="/contact"
-              className="btn btn-primary mt-6 self-start text-lg px-8 py-4"
+              key={item.href}
+              href={item.href}
+              className="py-3 text-2xl font-semibold text-white/90 active:text-magenta"
               onClick={() => setOpen(false)}
             >
-              {site.cta}
+              {item.label}
             </Link>
-          </nav>
-        </div>
-      )}
+          ))}
+          <Link
+            href="/contact"
+            className="btn btn-primary mt-6 self-start text-lg px-8 py-4"
+            onClick={() => setOpen(false)}
+          >
+            {site.cta}
+          </Link>
+        </nav>
+      </div>
     </>
   );
 }

@@ -62,7 +62,7 @@ export default function Home() {
         />
         <div className="container-site relative grid gap-10 lg:grid-cols-[1fr_45%] items-end">
           {/* Left Text Content */}
-          <div className="pb-20 md:pb-32 z-10 pt-10">
+          <div className="pb-4 md:pb-32 z-10 pt-10">
             <TextReveal as="p" immediate className="type-label text-violet">
               Marketing for medspas
             </TextReveal>
@@ -87,7 +87,7 @@ export default function Home() {
                 See our work
               </Link>
             </Reveal>
-            <Reveal delay={0.6} className="mt-16">
+            <Reveal delay={0.6} className="mt-16 hidden lg:block">
               <p className="text-sm text-plum-soft">
                 Led by <strong className="font-semibold text-plum">{site.founder.name}</strong>,{" "}
                 {site.founder.title}
@@ -106,6 +106,16 @@ export default function Home() {
                 className="w-full h-auto object-contain object-bottom drop-shadow-2xl"
                 priority
               />
+            </Reveal>
+          </div>
+          
+          {/* Mobile "Led by Maya" */}
+          <div className="lg:hidden text-center pb-10 -mt-6 z-10">
+            <Reveal delay={0.5}>
+              <p className="text-sm text-plum-soft">
+                Led by <strong className="font-semibold text-plum">{site.founder.name}</strong>,{" "}
+                {site.founder.title}
+              </p>
             </Reveal>
           </div>
         </div>
@@ -158,7 +168,7 @@ export default function Home() {
       {/* Founder: Maya u prvom planu */}
       <section className="bg-blush">
         <div className="container-site grid items-center gap-12 py-24 md:grid-cols-2 md:py-32">
-          <Reveal effect="clip" className="order-last overflow-hidden rounded-3xl md:order-first">
+          <Reveal effect="clip" className="overflow-hidden rounded-3xl">
             <Image
               src="/images/maya.webp"
               alt="Maya Sterling, Founder"
